@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruksi Command Prompt (CMD)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #blue;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #blue;
+        }
+        h1 {
+            text-align: center;
+            color: #blue;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        .section {
+            background: #blue;
+            margin-bottom: 20px;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #e67e22;
+            font-size: 1.4em;
+            border-left: 5px solid #e67e22;
+            padding-left: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-bottom: 1px dotted #blue;
+        }
+        code {
+            background-color: #2d3436;
+            color: #fab1a0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        .desc {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Instruksi Command Prompt (CMD)</h1>
+
+    <div class="section">
+        <h2>1. Navigasi File & Folder</h2>
+        <ul>
+            <li><code>dir</code>: Menampilkan daftar file & folder yang ada di direktori saat ini.</li>
+            <li><code>cd [nama_folder]</code>: Singkatan dari <i>change directory</i>. Digunakan untuk masuk ke folder.</li>
+            <li><code>cd ..</code>: Kembali ke 1 tingkat folder sebelumnya (naik ke folder induk).</li>
+            <li><code>cls</code>: Singkatan dari <i>clear screen</i>. Menghapus semua teks di layar CMD.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Pengelolaan File & Folder</h2>
+        <ul>
+            <li><code>mkdir [nama_folder]</code>: Membuat folder baru.</li>
+            <li><code>ren [nama_lama] [nama_baru]</code>: Mengubah nama file/folder.</li>
+            <li><code>copy [sumber] [tujuan]</code>: Menyalin (copy) file ke lokasi tujuan.</li>
+            <li><code>del [nama_file]</code>: Menghapus 1 atau lebih file.</li>
+            <li><code>rmdir [nama_folder]</code>: Menghapus folder (folder tersebut harus kosong terlebih dahulu).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Informasi Jaringan</h2>
+        <ul>
+            <li><code>ping [alamat_website/IP]</code>: Mengecek koneksi komputer agar bisa terhubung dengan alamat tertentu.</li>
+            <li><code>ipconfig</code>: Menampilkan alamat IP pengguna.</li>
+            <li><code>tracert [alamat_tujuan]</code>: Melacak rute perjalanan komputer menuju server tujuan.</li>
+            <li><code>netstat</code>: Menampilkan koneksi yang aktif di komputer.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Informasi Sistem & Utilitas</h2>
+        <ul>
+            <li><code>systeminfo</code>: Menampilkan spesifikasi hardware & versi Windows.</li>
+            <li><code>tasklist</code>: Menampilkan daftar aplikasi yang sedang aktif.</li>
+            <li><code>taskkill /f /im [nama_aplikasi].exe</code>: Menghentikan secara paksa suatu aplikasi.</li>
+            <li><code>sfc /scannow</code>: Memeriksa & memperbaiki file sistem Windows yang rusak.</li>
+        </ul>
+    </div>
+    
+<div class="container">
+
+    <header>
+
+        <h1>Cara Setting IP Address Statis</h1>
+
+        <p>Panduan Konfigurasi Manual di Windows</p>
+
+    </header>
+
+
+
+    <div class="step-card">
+
+        <h2>1. Identifikasi Interface</h2>
+
+        <p>Buka Command Prompt (CMD) dan ketik perintah berikut untuk melihat daftar kartu jaringan (Network Adapter) Anda:</p>
+
+        <div class="command-box">ipconfig</div>
+
+        <p>Catat nama interface yang ingin diubah (misalnya: <i>Ethernet</i> atau <i>Wi-Fi</i>).</p>
+
+    </div>
+
+
+
+    <div class="step-card">
+
+        <h2>2. Membuka Control Panel</h2>
+
+        <ul>
+
+            <li>Tekan tombol <code>Win + R</code>, ketik <b>ncpa.cpl</b> lalu tekan Enter.</li>
+
+            <li>Klik kanan pada adapter jaringan Anda, pilih <b>Properties</b>.</li>
+
+            <li>Cari dan klik dua kali pada <b>Internet Protocol Version 4 (TCP/IPv4)</b>.</li>
+
+        </ul>
+
+    </div>
+
+
+
+    <div class="step-card">
+
+        <h2>3. Memasukkan Alamat IP</h2>
+
+        <p>Pilih opsi <i>"Use the following IP address"</i> dan masukkan detail berikut:</p>
+
+        <ul>
+
+            <li><b>IP Address:</b> 192.168.1.10 (Contoh)</li>
+
+            <li><b>Subnet Mask:</b> 255.255.255.0</li>
+
+            <li><b>Default Gateway:</b> 192.168.1.1 (Biasanya IP Router)</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>Catatan:</strong> Pastikan IP yang Anda masukkan tidak sama dengan perangkat lain dalam satu jaringan agar tidak terjadi <i>IP Conflict</i>.
+
+        </div>
+
+    </div>
+
+
+
+    <div class="step-card">
+
+        <h2>4. Verifikasi Hasil</h2>
+
+        <p>Setelah klik OK, kembali ke CMD dan gunakan perintah di bawah ini untuk memastikan perubahan sudah diterapkan:</p>
+
+        <div class="command-box">ipconfig /all</div>
+
+    </div>
+
+</div>
+
+<div class="table-container">
+    <h1>Estimasi Konsumsi Daya Alat Elektronik</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Barang</th>
+                <th>Voltase (V)</th>
+                <th>Daya (Watt)</th>
+                <th>Kategori</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>220V</td>
+                <td>5 - 15W</td>
+                <td><span class="badge bg-green">Hemat</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Charger HP</td>
+                <td>100-240V</td>
+                <td>10 - 65W</td>
+                <td><span class="badge bg-green">Hemat</span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Laptop</td>
+                <td>19V - 20V</td>
+                <td>45 - 90W</td>
+                <td><span class="badge bg-green">Sedang</span></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Televisi (LED 32")</td>
+                <td>220V</td>
+                <td>40 - 75W</td>
+                <td><span class="badge bg-green">Sedang</span></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Kulkas (1 Pintu)</td>
+                <td>220V</td>
+                <td>70 - 120W</td>
+                <td><span class="badge bg-green">Sedang</span></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Kipas Angin</td>
+                <td>220V</td>
+                <td>30 - 60W</td>
+                <td><span class="badge bg-green">Hemat</span></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Mesin Cuci</td>
+                <td>220V</td>
+                <td>250 - 450W</td>
+                <td><span class="badge bg-red">Tinggi</span></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Rice Cooker (Memasak)</td>
+                <td>220V</td>
+                <td>350 - 400W</td>
+                <td><span class="badge bg-red">Tinggi</span></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Air Conditioner (AC 1/2 PK)</td>
+                <td>220V</td>
+                <td>350 - 600W</td>
+                <td><span class="badge bg-red">Tinggi</span></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Setrika Listrik</td>
+                <td>220V</td>
+                <td>300 - 400W</td>
+                <td><span class="badge bg-red">Tinggi</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<header>
+    <h1>Panduan Teknologi Virtualisasi</h1>
+    <p>Memahami Manfaat, Kegunaan, dan Konfigurasi Dasar</p>
+</header>
+
+<section class="card">
+    <h2>1. Oracle VM VirtualBox</h2>
+    <p><strong>Fungsi:</strong> Hypervisor tipe 2 (Hosted) yang berjalan di atas sistem operasi (Windows/Mac/Linux).</p>
+    <p><strong>Manfaat:</strong> Gratis (Open Source), ringan, dan mendukung banyak OS tamu.</p>
+    
+    <div class="steps">
+        <strong>Cara Konfigurasi:</strong>
+        <ol>
+            <li>Klik tombol <strong>New</strong> untuk membuat VM baru.</li>
+            <li>Tentukan Nama, Tipe OS (ISO), dan alokasi <strong>Base Memory (RAM)</strong>.</li>
+            <li>Buat <strong>Virtual Hard Disk (VDI)</strong> dengan ukuran dinamis.</li>
+            <li>Masuk ke <strong>Settings > Network</strong>, pilih <em>Bridged Adapter</em> jika ingin VM mendapat IP dari router.</li>
+            <li>Klik <strong>Start</strong> untuk memulai instalasi.</li>
+        </ol>
+    </div>
+</section>
+
+<section class="card">
+    <h2>2. VMware Workstation Pro/Player</h2>
+    <p><strong>Fungsi:</strong> Hypervisor tipe 2 kelas profesional dengan performa grafis dan stabilitas tinggi.</p>
+    <p><strong>Manfaat:</strong> Fitur <em>Snapshot</em> yang canggih, integrasi drag-and-drop file antar OS, dan performa hardware yang optimal.</p>
+    
+    <div class="steps">
+        <strong>Cara Konfigurasi:</strong>
+        <ol>
+            <li>Pilih <strong>Create a New Virtual Machine</strong>.</li>
+            <li>Gunakan mode <em>Typical</em> untuk konfigurasi standar.</li>
+            <li>Masukkan file <strong>ISO</strong> installer OS.</li>
+            <li>Atur jumlah Core CPU dan RAM (disarankan minimal 2GB untuk OS modern).</li>
+            <li>Selesaikan wizard dan jalankan VM untuk menginstal <em>VMware Tools</em> (penting untuk driver).</li>
+        </ol>
+    </div>
+</section>
+
+<section class="card">
+    <h2>3. Proxmox Virtual Environment (VE)</h2>
+    <p><strong>Fungsi:</strong> Hypervisor tipe 1 (Bare-metal) berbasis Debian Linux. Berjalan langsung di hardware tanpa OS induk.</p>
+    <p><strong>Manfaat:</strong> Skala enterprise, manajemen berbasis Web GUI, mendukung Container (LXC) dan Virtual Machine (KVM).</p>
+    
+    <div class="steps">
+        <strong>Cara Konfigurasi:</strong>
+        <ol>
+            <li>Instal Proxmox langsung ke Server/PC menggunakan bootable USB.</li>
+            <li>Setelah instal, akses panel kontrol melalui browser: <code>https://[IP_ADDRESS]:8006</code>.</li>
+            <li>Upload file ISO ke menu <strong>Storage > ISO Images</strong>.</li>
+            <li>Klik <strong>Create VM</strong> di pojok kanan atas.</li>
+            <li>Konfigurasi Resource (CPU, RAM, Network) dan pilih ISO yang sudah diupload.</li>
+        </ol>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Perbandingan Singkat</h2>
+    <table>
+        <tr>
+            <th>Fitur</th>
+            <th>VirtualBox</th>
+            <th>VMware</th>
+            <th>Proxmox VE</th>
+        </tr>
+        <tr>
+            <td>Tipe Hypervisor</td>
+            <td>Tipe 2 (Hosted)</td>
+            <td>Tipe 2 (Hosted)</td>
+            <td>Tipe 1 (Bare-metal)</td>
+        </tr>
+        <tr>
+            <td>Lisensi</td>
+            <td>Gratis / Open Source</td>
+            <td>Berbayar (Pro) / Gratis (Player)</td>
+            <td>Gratis (Community Edition)</td>
+        </tr>
+        <tr>
+            <td>Penggunaan Utama</td>
+            <td>Belajar / Testing Ringan</td>
+            <td>Workstation Profesional</td>
+            <td>Server Produksi / Home Lab</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p style="text-align: center; font-size: 0.9em; color: #777;">&copy; 2024 Panduan Virtualisasi Dasar</p>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>
